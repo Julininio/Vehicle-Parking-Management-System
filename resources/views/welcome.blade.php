@@ -6,7 +6,8 @@ include('includes/dbconn.php');
 if(isset($_POST['login']))
   {
     $adminuser=$_POST['username'];
-    $password=md5($_POST['password']);
+    // $password=md5($_POST['password']);
+	$password=$_POST['password'];
     $query=mysqli_query($con,"SELECT ID from admin where  UserName='$adminuser' && Password='$password' ");
     $ret=mysqli_fetch_array($query);
     if($ret>0){
@@ -25,9 +26,9 @@ if(isset($_POST['login']))
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Vehicle Parking System</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/datepicker3.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
+	<link href="{{ asset("/assets/css/bootstrap.min.css") }}" rel="stylesheet">
+	<link href="{{ asset("/assets/css/datepicker3.css") }}" rel="stylesheet">
+	<link href="{{ asset("/css/styles.css") }}" rel="stylesheet">
 	<!--[if lt IE 9]>
 	<script src="js/html5shiv.js"></script>
 	<script src="js/respond.min.js"></script>
@@ -43,12 +44,12 @@ if(isset($_POST['login']))
 					<form method="POST">
 					<?php if($msg)
 						echo "<div class='alert bg-danger' role='alert'>
-						<em class='fa fa-lg fa-warning'>&nbsp;</em> 
+						<em class='fa fa-lg fa-warning'>&nbsp;</em>
 						$msg
 						<a href='#' class='pull-right'>
 						<em class='fa fa-lg fa-close'>
-						</em></a></div>" ?> 
-                        
+						</em></a></div>" ?>
+
 
 						<fieldset>
 							<div class="form-group">
@@ -58,18 +59,18 @@ if(isset($_POST['login']))
 								<input class="form-control" placeholder="Password" name="password" type="password" value="">
 							</div>
 							<div class="checkbox">
-								
-								<a href="forgot-password.php" style="text-decoration:none;">Forgot Password?</a>
+
+								<a href="{{ url("forgot-password.php") }}" style="text-decoration:none;">Forgot Password?</a>
 							</div>
 							<button class="btn btn-success" type="submit" name="login">Login</button></fieldset>
 					</form>
 				</div>
 			</div>
 		</div><!-- /.col-->
-	</div><!-- /.row -->	
-	
+	</div><!-- /.row -->
 
-<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+
+<script src="{{ asset("/js/jquery-1.11.1.min.js") }}"></script>
+	<script src="{{ asset("/js/bootstrap.min.js") }}"></script>
 </body>
 </html>
