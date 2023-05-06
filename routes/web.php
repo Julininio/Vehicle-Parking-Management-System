@@ -36,14 +36,23 @@ Route::post('/register', [RegisterController::class, 'store'])->middleware('gues
 Route::post('/login', [LoginController::class, 'login'])->middleware('guest')->name('login.perform');
 Route::get('/reset-password', [ResetPassword::class, 'show'])->middleware('guest')->name('reset-password');
 Route::post('/reset-password', [ResetPassword::class, 'send'])->middleware('guest')->name('reset.perform');
-Route::get('/change-password', [ChangePassword::class, 'show'])->middleware('guest')->name('change-password');
-Route::post('/change-password', [ChangePassword::class, 'update'])->middleware('guest')->name('change.perform');
+// Route::get('/change-password', [ChangePassword::class, 'show'])->middleware('guest')->name('change-password');
+// Route::post('/change-password', [ChangePassword::class, 'update'])->middleware('guest')->name('change.perform');
 
 // the dashboard
 // Route::get('/dashboard', [HomeController::class, 'index'])->name('home')->middleware('auth'); // before
 Route::get('/dashboard', function () { return view('dashboard'); }); // after
 
-Route::get('/vehicle-category', function () { return view('vehicle-category'); }); // after
+Route::get('/profile', function () { return view('profile'); });
+Route::get('/vehicle-category', function () { return view('vehicle-category'); });
+Route::get('/manage-vehicles', function () { return view('manage-vehicles'); });
+Route::get('/in-vehicles', function () { return view('in-vehicles'); });
+Route::get('/out-vehicles', function () { return view('out-vehicles'); });
+Route::get('/reports', function () { return view('reports'); });
+Route::get('/generate-reports', function () { return view('generate-reports'); });
+Route::get('/total-income', function () { return view('total-income'); });
+Route::get('/change-password', function () { return view('change-password'); });
+Route::get('/settings', function () { return view('settings'); });
 
 
 
@@ -51,7 +60,7 @@ Route::get('/vehicle-category', function () { return view('vehicle-category'); }
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('/virtual-reality', [PageController::class, 'vr'])->name('virtual-reality');
 	Route::get('/rtl', [PageController::class, 'rtl'])->name('rtl');
-	Route::get('/profile', [UserProfileController::class, 'show'])->name('profile');
+	// Route::get('/profile', [UserProfileController::class, 'show'])->name('profile');
 	Route::post('/profile', [UserProfileController::class, 'update'])->name('profile.update');
 	Route::get('/profile-static', [PageController::class, 'profile'])->name('profile-static');
 	Route::get('/sign-in-static', [PageController::class, 'signin'])->name('sign-in-static');
