@@ -15,8 +15,8 @@
 
 </head>
 <body>
-        @include("navigation")
-        @include("sidebar")
+    @include('navigation')
+    @include('sidebar')
 
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="row">
@@ -24,7 +24,7 @@
 				<li><a href="">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">Vehicle Category Management</li>
+				<li class="active">View Reports</li>
 			</ol>
 		</div><!--/.row-->
 
@@ -37,63 +37,66 @@
 		<div class="row">
 				<div class="col-lg-12">
 					<div class="panel panel-default">
-						<div class="panel-heading">Vehicle Categories <a href="" type="button" class="btn btn-sm btn-primary">Add New Vehicle Category</a></div>
+						<div class="panel-heading">Generate Reports</div>
 						<div class="panel-body">
                         <table id="example" class="table table-striped table-hover table-bordered" style="width:100%">
 
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Vehicle Category</th>
-                <th>Published On</th>
-                <th>Actions</th>
 
-            </tr>
-        </thead>
-        <tbody>
-            {{-- in the meantime, this is hardcoded. --}}
-            <tr>
-                <td>Hardcoded</td>
-                <td>Hardcoded</td>
-                <td>Hardcoded</td>
-                <td>
-                    <a href="hardcoded"> <button class="btn btn-success btn-sm"><i class="fa fa-edit"></i></button> </a>
-                    <a href="hardcoded"> <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button> </a>
-                </td>
-            </tr>
+                        <div class="alert bg-info" role="alert"> <em class="fa fa-lg fa-file">&nbsp;</em>
+                            {{-- This is hardcoded --}}
+                            Displaying reports from <b> 2023-05-06 to 2023-05-06 </b>
+                        </div>
 
-            <tr>
-                <td>Hardcoded</td>
-                <td>Hardcoded</td>
-                <td>Hardcoded</td>
-                <td>
-                    <a href="hardcoded"> <button class="btn btn-success btn-sm"><i class="fa fa-edit"></i></button> </a>
-                    <a href="hardcoded"> <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button> </a>
-                </td>
-            </tr>
 
-            <tr>
-                <td>Hardcoded</td>
-                <td>Hardcoded</td>
-                <td>Hardcoded</td>
-                <td>
-                    <a href="hardcoded"> <button class="btn btn-success btn-sm"><i class="fa fa-edit"></i></button> </a>
-                    <a href="hardcoded"> <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button> </a>
-                </td>
-            </tr>
-        </tbody>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Vehicle Reg. No.</th>
+                            <th>Company</th>
+                            <th>Category</th>
+                            <th>Parking Number</th>
+                            <th>Vehicle's Owner</th>
 
-    </table>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+                        <?php
+                                for ($cnt=1; $cnt < 3; $cnt++) { ?>
+                                    {{-- this is hardcoded --}}
+                                    <tr>
+                                        <td><?php echo $cnt ?></td>
+                                        <td>LLL-8987</td>
+                                        <td>Kawasaki</td>
+                                        <td>Two Wheeler</td>
+                                        <td>CA-59268</td>
+                                        <td>James</td>
+
+                                    </tr>
+
+                                <?php } ?>
+
+
+
+
+                    </tbody>
+
+                    </table>
 						</div>
 					</div>
 				</div>
 
 
 
-</div>
+</div><!--/.row-->
 
-    @include('footer')
-	</div>
+
+
+
+        @include('footer')
+	</div>	<!--/.main-->
 
 	<script src="{{ asset("/assets/js/jquery-1.11.1.min.js") }}"></script>
 	<script src="{{ asset("/assets/js/bootstrap.min.js") }}"></script>
@@ -125,3 +128,4 @@
 
 </body>
 </html>
+

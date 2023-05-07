@@ -15,8 +15,9 @@
 
 </head>
 <body>
-        @include("navigation")
-        @include("sidebar")
+    @include('navigation')
+    @include('sidebar')
+
 
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="row">
@@ -24,7 +25,7 @@
 				<li><a href="">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">Vehicle Category Management</li>
+				<li class="active">Outgoing Vehicle Management</li>
 			</ol>
 		</div><!--/.row-->
 
@@ -37,63 +38,58 @@
 		<div class="row">
 				<div class="col-lg-12">
 					<div class="panel panel-default">
-						<div class="panel-heading">Vehicle Categories <a href="" type="button" class="btn btn-sm btn-primary">Add New Vehicle Category</a></div>
+						<div class="panel-heading">Outgoing Vehicles</div>
 						<div class="panel-body">
                         <table id="example" class="table table-striped table-hover table-bordered" style="width:100%">
 
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Vehicle Category</th>
-                <th>Published On</th>
-                <th>Actions</th>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Vehicle No.</th>
+                                    <th>Company</th>
+                                    <th>Category</th>
+                                    <th>Parking Number</th>
+                                    <th>Charge</th>
+                                    <th>Vehicle's Owner</th>
+                                    <th></th>
 
-            </tr>
-        </thead>
-        <tbody>
-            {{-- in the meantime, this is hardcoded. --}}
-            <tr>
-                <td>Hardcoded</td>
-                <td>Hardcoded</td>
-                <td>Hardcoded</td>
-                <td>
-                    <a href="hardcoded"> <button class="btn btn-success btn-sm"><i class="fa fa-edit"></i></button> </a>
-                    <a href="hardcoded"> <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button> </a>
-                </td>
-            </tr>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                for ($cnt=1; $cnt < 13; $cnt++) { ?>
+                                    {{-- this is hardcoded --}}
+                                    <tr>
+                                        <td><?php echo $cnt ?></td>
+                                        <td>LLL-8987</td>
+                                        <td>Kawasaki</td>
+                                        <td>Two Wheeler</td>
+                                        <td>CA-59268</td>
+                                        <td>James</td>
+                                        <td>
+                                            <a href=""><button type="button" class="btn btn-sm btn-info">View Details</button></a>
+                                            <a href=""><button type="button" class="btn btn-sm btn-warning"> <i class="fa fa-print"></i></button>
+                                        </td>
+                                    </tr>
 
-            <tr>
-                <td>Hardcoded</td>
-                <td>Hardcoded</td>
-                <td>Hardcoded</td>
-                <td>
-                    <a href="hardcoded"> <button class="btn btn-success btn-sm"><i class="fa fa-edit"></i></button> </a>
-                    <a href="hardcoded"> <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button> </a>
-                </td>
-            </tr>
+                                <?php } ?>
 
-            <tr>
-                <td>Hardcoded</td>
-                <td>Hardcoded</td>
-                <td>Hardcoded</td>
-                <td>
-                    <a href="hardcoded"> <button class="btn btn-success btn-sm"><i class="fa fa-edit"></i></button> </a>
-                    <a href="hardcoded"> <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button> </a>
-                </td>
-            </tr>
-        </tbody>
+                            </tbody>
 
-    </table>
+                        </table>
 						</div>
 					</div>
 				</div>
 
 
 
-</div>
+</div><!--/.row-->
 
-    @include('footer')
-	</div>
+
+
+
+        @include('footer')
+	</div>	<!--/.main-->
 
 	<script src="{{ asset("/assets/js/jquery-1.11.1.min.js") }}"></script>
 	<script src="{{ asset("/assets/js/bootstrap.min.js") }}"></script>
