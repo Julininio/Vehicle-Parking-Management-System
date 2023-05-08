@@ -4,16 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Validation\ValidationException;
-use Illuminate\Support\Facades\Password;
 use \Illuminate\Contracts\Support\Renderable;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
-    // use AuthenticatesUsers;
-
     /**
      * Display login page.
      *
@@ -26,12 +20,12 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        $credentials = $request->validate([
-            'username' => ['required', 'username'],
-            'password' => ['required'],
-        ]);
+        // $credentials = $request->validate([
+        //     'username' => 'required|username',
+        //     'password' => 'required|password',
+        // ]);
 
-        if (Auth::attempt(['UserName' => $request->username, 'Password' => $request->password])) {
+        if (Auth::attempt(['username' => $request->username, 'password' => $request->password])) {
             $request->session()->regenerate();
 
             return redirect()->intended('dashboard');

@@ -26,6 +26,9 @@ Route::get('/', [HomeController::class, "index"])->middleware('auth');
 
 Route::get('/login', [LoginController::class, 'show'])->middleware('guest')->name("login");
 Route::post('/login', [LoginController::class, 'login'])->middleware('guest');
+Route::get('logout', [LoginController::class, 'logout'])->name('logout'); // should this be a post.
+
+Route::post('/register', [RegisterController::class, 'store'])->middleware('guest')->name('register.perform');
 
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

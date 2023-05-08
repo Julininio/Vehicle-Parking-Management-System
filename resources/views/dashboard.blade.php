@@ -136,14 +136,14 @@
         @include('footer')
 	</div>
 
-	<script src="{{ asset("/js/jquery-1.11.1.min.js") }}"></script>
-	<script src="{{ asset("/js/bootstrap.min.js") }}"></script>
-	<script src="{{ asset("/js/chart.min.js") }}"></script>
-	<script src="{{ asset("/js/chart-data.js") }}"></script>
-	<script src="{{ asset("/js/easypiechart.js") }}"></script>
-	<script src="{{ asset("/js/easypiechart-data.js") }}"></script>
-	<script src="{{ asset("/js/bootstrap-datepicker.js") }}"></script>
-	<script src="{{ asset("/js/custom.js") }}"></script>
+	<script src="{{ asset("/assets/js/jquery-1.11.1.min.js") }}"></script>
+	<script src="{{ asset("/assets/js/bootstrap.min.js") }}"></script>
+	<script src="{{ asset("/assets/js/chart.min.js") }}"></script>
+	<script src="{{ asset("/assets/js/chart-data.js") }}"></script>
+	<script src="{{ asset("/assets/js/easypiechart.js") }}"></script>
+	<script src="{{ asset("/assets/js/easypiechart-data.js") }}"></script>
+	<script src="{{ asset("/assets/js/bootstrap-datepicker.js") }}"></script>
+	<script src="{{ asset("/assets/js/custom.js") }}"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js'></script>
 	<script>
 		window.onload = function () {

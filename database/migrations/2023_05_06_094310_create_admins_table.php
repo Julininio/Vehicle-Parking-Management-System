@@ -12,19 +12,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('admin', function (Blueprint $table) {
-            $table->engine = 'InnoDB';
-            $table->id('ID');
-            $table->string('AdminName');
-            $table->string('UserName');
-            $table->string('MobileNumber', 10);
-            $table->string('Security_Code', 55)->nullable(false);
-            $table->string('Email');
-            $table->string('Password', 120);
-            $table->timestamp('AdminRegdate')->default(new Expression('CURRENT_TIMESTAMP'));
+        // Schema::create('admin', function (Blueprint $table) {
+        //     $table->engine = 'InnoDB';
+        //     $table->id('ID');
+        //     $table->string('AdminName');
+        //     $table->string('UserName');
+        //     $table->string('MobileNumber', 10);
+        //     $table->string('Security_Code', 55)->nullable(false);
+        //     $table->string('Email');
+        //     $table->string('Password', 120);
+        //     $table->timestamp('AdminRegdate')->default(new Expression('CURRENT_TIMESTAMP'));
 
-            // TODO; add default values for the admin user. should i move this to the seed??
-        });
+        //     // TODO; add default values for the admin user. should i move this to the seed??
+        // });
     }
 
     /**
