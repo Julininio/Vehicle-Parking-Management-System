@@ -38,24 +38,31 @@
 					<div class="panel-body">
 
 						<div class="col-md-12">
+                            @if ($msg)
+                                <div class='alert bg-info' role='alert'>
+                                    <em class='fa fa-lg fa-warning'>&nbsp;</em>
+                                    {{$msg}}
+                                </div>
+                            @endif
 
 
 
-							<form method="POST">
+							<form method="POST" action="/profile">
+                                @csrf
 
 								<div class="form-group">
 
 
                                 <div class="col-lg-6">
 									<label>Full Name</label>
-									<input type="text" class="form-control" value="" id="adminname" name="adminname" required>
+									<input type="text" class="form-control" value={{Auth::user()->username}} id="adminname" name="username" required>
 								</div>
                                 </div>
 
                                 <div class="col-lg-6">
 								<div class="form-group">
-									<label>Username</label>
-									<input type="text" class="form-control" value="" id="username" name="username" readonly>
+									<label>Username(read-only)</label>
+									<input type="text" class="form-control" value={{Auth::user()->username}} id="username" name="" readonly>
 								</div>
                                 </div>
 
@@ -63,14 +70,14 @@
                                 <div class="col-lg-6">
 								<div class="form-group">
 									<label>Email</label>
-									<input type="email" class="form-control" value="" readonly>
+									<input type="email" class="form-control" value={{Auth::user()->email}} name="email" readonly>
 								</div>
                                 </div>
 
                                 <div class="col-lg-6">
                                 <div class="form-group">
 									<label>Contact Number</label>
-									<input type="number" class="form-control" name="contactnumber" type="email" value="" required="true">
+									<input type="number" class="form-control" name="MobileNumber" type="email" value={{Auth::user()->MobileNumber}} required="true">
 								</div>
                                 </div>
 
@@ -91,14 +98,14 @@
         @include("footer")
 	</div>	<!--/.main-->
 
-	<script src="{{ asset("/js/jquery-1.11.1.min.js") }}"></script>
-	<script src="{{ asset("/js/bootstrap.min.js") }}"></script>
-	<script src="{{ asset("/js/chart.min.js") }}"></script>
-	<script src="{{ asset("/js/chart-data.js") }}"></script>
-	<script src="{{ asset("/js/easypiechart.js") }}"></script>
-	<script src="{{ asset("/js/easypiechart-data.js") }}"></script>
-	<script src="{{ asset("/js/bootstrap-datepicker.js") }}"></script>
-	<script src="{{ asset("/js/custom.js") }}"></script>
+	<script src="{{ asset("/assets/js/jquery-1.11.1.min.js") }}"></script>
+	<script src="{{ asset("/assets/js/bootstrap.min.js") }}"></script>
+	<script src="{{ asset("/assets/js/chart.min.js") }}"></script>
+	<script src="{{ asset("/assets/js/chart-data.js") }}"></script>
+	<script src="{{ asset("/assets/js/easypiechart.js") }}"></script>
+	<script src="{{ asset("/assets/js/easypiechart-data.js") }}"></script>
+	<script src="{{ asset("/assets/js/bootstrap-datepicker.js") }}"></script>
+	<script src="{{ asset("/assets/js/custom.js") }}"></script>
 	<script>
 		window.onload = function () {
 		var chart1 = document.getElementById("line-chart").getContext("2d");

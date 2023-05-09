@@ -16,15 +16,15 @@ return new class extends Migration
             $table->engine = 'InnoDB';
 
             $table->id('ID');
-            $table->string('ParkingNumber');
+            $table->string('ParkingNumber')->nullable(true);
             $table->string('VehicleCategory')->nullable(false);
             $table->string('VehicleCompanyname');
             $table->string('RegistrationNumber');
             $table->string('OwnerName');
             $table->string('OwnerContactNumber', 10);
-            $table->string('ParkingCharge');
-            $table->string('Remark')->nullable(false);
-            $table->string('Status', 5)->nullable(false);
+            $table->string('ParkingCharge')->nullable(true);
+            $table->string('Remark')->nullable(true);
+            $table->string('Status', 5)->nullable(true);
             $table->timestamp('InTime')->default(new Expression('CURRENT_TIMESTAMP'));
             $table->timestamp('OutTime')->default(new Expression('CURRENT_TIMESTAMP'))->useCurrentOnUpdate();
 

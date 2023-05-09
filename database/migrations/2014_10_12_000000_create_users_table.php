@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Query\Expression;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
@@ -16,18 +17,12 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('username');
-            $table->string('firstname')->nullable();
-            $table->string('lastname')->nullable();
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->string('email')->nullable(true);
             $table->string('password');
-            $table->string('address')->nullable();
-            $table->string('city')->nullable();
-            $table->string('country')->nullable();
-            $table->string('postal')->nullable();
-            $table->text('about')->nullable();
-            $table->rememberToken();
-            $table->timestamps();
+            $table->string('MobileNumber', 10)->nullable(true);
+            $table->string('Security_Code', 55)->nullable(true);
+            // $table->rememberToken();
+            $table->timestamp('AdminRegdate')->default(new Expression('CURRENT_TIMESTAMP'));
         });
     }
 

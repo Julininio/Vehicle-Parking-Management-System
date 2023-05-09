@@ -38,16 +38,21 @@
 					<div class="panel-body">
 
 						<div class="col-md-12">
+                            @if ($msg)
+                                <div class='alert bg-info' role='alert'>
+                                    <em class='fa fa-lg fa-warning'>&nbsp;</em>
+                                    {{$msg}}
+                                </div>
+                            @endif
 
-
-
-							<form method="POST">
+							<form method="POST" action="/change-password">
+                                @csrf
 
 								<div class="form-group">
 
 
-								<label>Existing Password</label>
-									<input type="password" class="form-control" name="currentpassword" required>
+								<label>Enter current email</label>
+									<input type="email" class="form-control" name="email" required>
 								</div>
 
 

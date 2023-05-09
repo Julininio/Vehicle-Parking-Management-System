@@ -39,28 +39,29 @@
 
 						<div class="col-md-12">
 
-							<form method="POST">
+							<form method="POST" action="/manage-vehicles">
+                                @csrf
 
 								<div class="form-group">
 									<label>Registration Number</label>
-									<input type="text" class="form-control" placeholder="LOL-1869" id="vehreno" name="vehreno" required>
+									<input type="text" class="form-control" placeholder="LOL-1869" id="vehreno" name="RegistrationNumber" required>
 								</div>
 
 
 								<div class="form-group">
 									<label>Vehicle's Company Name</label>
-									<input type="text" class="form-control" placeholder="Tesla" id="vehcomp" name="vehcomp" required>
+									<input type="text" class="form-control" placeholder="Tesla" id="vehcomp" name="VehicleCompanyname" required>
 								</div>
 
 
 									<div class="form-group">
 										<label>Vehicle Category</label>
-										<select class="form-control" name="catename" id="catename">
+										<select class="form-control" name="VehicleCategory" id="catename">
 										<option value="0">Select Category</option>
 
-                                        <option value="hardcoded">Four Wheeler</option>
-                                        <option value="hardcoded">Two Wheelere</option>
-                                        <option value="hardcoded">Three Wheeler</option>
+                                        <option value="Four Wheeler">Four Wheeler</option>
+                                        <option value="Two Wheeler">Two Wheeler</option>
+                                        <option value="Three Wheeler">Three Wheeler</option>
 
 										</select>
 									</div>
@@ -68,13 +69,13 @@
 
 								<div class="form-group">
 									<label>Owner's Full Name</label>
-									<input type="text" class="form-control" placeholder="Enter Here.." id="ownername" name="ownername" required>
+									<input type="text" class="form-control" placeholder="Enter Here.." id="ownername" name="OwnerName" required>
 								</div>
 
 
 								<div class="form-group">
 									<label>Owner's Contact</label>
-									<input type="text" class="form-control" placeholder="Enter Here.." maxlength="10" pattern="[0-9]+" id="ownercontno" name="ownercontno" required>
+									<input type="text" class="form-control" placeholder="Enter Here.." maxlength="10" pattern="[0-9]+" id="ownercontno" name="OwnerContactNumber" required>
 								</div>
 
 
