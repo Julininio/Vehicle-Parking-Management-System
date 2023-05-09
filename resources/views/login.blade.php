@@ -21,12 +21,19 @@
 				<div class="panel-body">
 					<form method="POST" action="/login">
                         @csrf
+
+                        @if ($msg)
+                                <div class='alert bg-danger' role='alert'>
+                                    <em class='fa fa-lg fa-warning'>&nbsp;</em>
+                                    {{$msg}}
+                                </div>
+                            @endif
 						<fieldset>
 							<div class="form-group">
 								<input class="form-control" placeholder="Username" name="username" type="text" value="nangosha">
 							</div>
 							<div class="form-group">
-								<input class="form-control" placeholder="Password" name="password" type="password" value="passwords">
+								<input class="form-control" placeholder="Password" name="password" type="password" value="nangosha">
 							</div>
 							<div class="checkbox">
 								<a href="{{ url("/forgot-password") }}" style="text-decoration:none;">Forgot Password?</a>

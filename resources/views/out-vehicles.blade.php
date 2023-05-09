@@ -56,23 +56,22 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php
-                                for ($cnt=1; $cnt < 13; $cnt++) { ?>
-                                    {{-- this is hardcoded --}}
+
+                                @foreach ($rows as $vehicle)
                                     <tr>
-                                        <td><?php echo $cnt ?></td>
-                                        <td>LLL-8987</td>
-                                        <td>Kawasaki</td>
-                                        <td>Two Wheeler</td>
-                                        <td>CA-59268</td>
-                                        <td>James</td>
+                                        <td>{{$vehicle->ID}}</td>
+                                        <td>{{$vehicle->RegistrationNumber}}</td>
+                                        <td>{{$vehicle->VehicleCompanyname}}</td>
+                                        <td>{{$vehicle->VehicleCategory}}</td>
+                                        <td>{{$vehicle->ParkingNumber}}</td>
+                                        <td>UGX. {{$vehicle->ParkingCharge}}</td>
+                                        <td>{{$vehicle->OwnerName}}</td>
                                         <td>
                                             <a href=""><button type="button" class="btn btn-sm btn-info">View Details</button></a>
                                             <a href=""><button type="button" class="btn btn-sm btn-warning"> <i class="fa fa-print"></i></button>
                                         </td>
                                     </tr>
-
-                                <?php } ?>
+                                @endforeach
 
                             </tbody>
 

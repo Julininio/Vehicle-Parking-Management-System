@@ -28,10 +28,10 @@ class LoginController extends Controller
         if (Auth::attempt(['username' => $request->username, 'password' => $request->password])) {
             $request->session()->regenerate();
 
-            return redirect()->intended('dashboard');
+            return redirect('/dashboard');
         }
 
-        return back();
+        return view('login', ['msg' => "Details could not match."]);
     }
 
     public function logout(Request $request)
@@ -41,6 +41,6 @@ class LoginController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/login');
+        return view('login', ['msg' => ""]);
     }
 }

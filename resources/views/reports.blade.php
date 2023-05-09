@@ -40,7 +40,8 @@
 					<div class="panel panel-default">
 						<div class="panel-heading">Parking Reports</div>
 
-                        <form method="POST" enctype="multipart/form-data" name="datereports" action="generate-reports.php">
+                        <form method="POST" enctype="multipart/form-data" name="datereports" action="/generate-reports">
+                            @csrf
 
                             <div class="panel-body">
 

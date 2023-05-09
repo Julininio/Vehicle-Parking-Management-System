@@ -51,36 +51,20 @@
             </tr>
         </thead>
         <tbody>
-            {{-- in the meantime, this is hardcoded. --}}
-            <tr>
-                <td>Hardcoded</td>
-                <td>Hardcoded</td>
-                <td>Hardcoded</td>
-                <td>
-                    <a href="hardcoded"> <button class="btn btn-success btn-sm"><i class="fa fa-edit"></i></button> </a>
-                    <a href="hardcoded"> <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button> </a>
-                </td>
-            </tr>
 
-            <tr>
-                <td>Hardcoded</td>
-                <td>Hardcoded</td>
-                <td>Hardcoded</td>
-                <td>
-                    <a href="hardcoded"> <button class="btn btn-success btn-sm"><i class="fa fa-edit"></i></button> </a>
-                    <a href="hardcoded"> <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button> </a>
-                </td>
-            </tr>
 
-            <tr>
-                <td>Hardcoded</td>
-                <td>Hardcoded</td>
-                <td>Hardcoded</td>
-                <td>
-                    <a href="hardcoded"> <button class="btn btn-success btn-sm"><i class="fa fa-edit"></i></button> </a>
-                    <a href="hardcoded"> <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button> </a>
-                </td>
-            </tr>
+                @foreach ($categories as $category)
+                <tr>
+                    <td>{{$category->ID}}</td>
+                    <td>{{$category->VehicleCat}}</td>
+                    <td>{{$category->CreationDate}}</td>
+                    <td>
+                        <a href="hardcoded"> <button class="btn btn-success btn-sm"><i class="fa fa-edit"></i></button> </a>
+                        <a href="hardcoded"> <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button> </a>
+                    </td>
+                </tr>
+                @endforeach
+
         </tbody>
 
     </table>
