@@ -15,6 +15,6 @@
     $welcome_string="Good Evening, ";
 
 
-    echo $welcome_string, "Nangosha";
+    echo $welcome_string, "Admin";
 
 ?>

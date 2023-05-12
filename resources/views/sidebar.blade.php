@@ -26,7 +26,6 @@
         <li class=""><a href=""><em class="fa fa-toggle-on">&nbsp;</em> IN Vehicles</a></li>
         <li class=""><a href=""><em class="fa fa-toggle-off">&nbsp;</em> OUT Vehicles</a></li>
         <li class=""><a href=""><em class="fa fa-file">&nbsp;</em> View Reports</a></li>
-        <!-- <li class=""><a href="about.php"><em class="fa fa-info">&nbsp;</em> About Page</a></li> -->
         <li class=""><a href=""><em class="fa fa-dollar">&nbsp;</em> Total Income</a></li>
 
     </ul>

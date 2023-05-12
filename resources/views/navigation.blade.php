@@ -10,7 +10,7 @@
 
 
                 </li>
-                <li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="">
+                <li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
                     <em class="fa fa-user-circle"></em>
                 </a>
                     <ul class="dropdown-menu dropdown-alerts">
