@@ -28,7 +28,7 @@
 				</a></li>
 				<li class="active">Dashboard</li>
 			</ol>
-		</div><!--/.row-->
+		</div>
 
 		<div class="row">
 			<div class="col-lg-12">
@@ -36,7 +36,7 @@
                 @include('greetings')
 
 			</div>
-		</div><!--/.row-->
+		</div>
 
 		<div class="panel panel-container">
 			<div class="row">

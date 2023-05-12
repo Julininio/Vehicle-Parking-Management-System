@@ -42,41 +42,37 @@
 						<div class="panel-body">
                         <table id="example" class="table table-striped table-hover table-bordered" style="width:100%">
 
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Vehicle No.</th>
-                <th>Company</th>
-                <th>Category</th>
-                <th>Parking Number</th>
-                <th>Vehicle's Owner</th>
-                <th></th>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Vehicle No.</th>
+                                    <th>Company</th>
+                                    <th>Category</th>
+                                    <th>Parking Number</th>
+                                    <th>Vehicle's Owner</th>
+                                    <th></th>
 
-            </tr>
-        </thead>
-        <tbody>
+                                </tr>
+                            </thead>
+                            <tbody>
 
-                <?php
-                    for ($cnt=1; $cnt < 8; $cnt++) { ?>
-                    {{-- this is hardcoded --}}
-                    <tr>
-                        <td><?php echo $cnt ?></td>
-                        <td>LLL-8987</td>
-                        <td>Kawasaki</td>
-                        <td>Two Wheeler</td>
-                        <td>CA-59268</td>
-                        <td>James</td>
-                        <td>
-                            <a href=""><button type="button" class="btn btn-sm btn-danger">Take Action</button></a>
-                        </td>
-                    </tr>
+                                @foreach ($rows as $vehicle)
+                                    <tr>
+                                        <td>{{$vehicle->ID}}</td>
+                                        <td>{{$vehicle->RegistrationNumber}}</td>
+                                        <td>{{$vehicle->VehicleCompanyname}}</td>
+                                        <td>{{$vehicle->VehicleCategory}}</td>
+                                        <td>{{$vehicle->ParkingNumber}}</td>
+                                        <td>{{$vehicle->OwnerName}}</td>
+                                        <td>
+                                            <a href=""><button type="button" class="btn btn-sm btn-danger">Take Action</button></a>
+                                        </td>
+                                    </tr>
+                                @endforeach
 
-                <?php } ?>
+                            </tbody>
 
-
-        </tbody>
-
-    </table>
+                        </table>
 						</div>
 					</div>
 				</div>
@@ -121,5 +117,3 @@
 
 </body>
 </html>
-
-<?php ?>

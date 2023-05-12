@@ -13,33 +13,33 @@ class ChangePassword extends Controller
 
     public function __construct()
     {
-        Auth::logout();
+        // Auth::logout();
 
-        $id = intval(request()->id);
-        $this->user = User::find($id);
+        // $id = intval(request()->id);
+        // $this->user = User::find($id);
     }
 
     public function show()
     {
-        return view('auth.change-password');
+        return view('change-password', ['msg' => ""]);
     }
 
     public function update(Request $request)
     {
         $attributes = $request->validate([
             'email' => ['required'],
-            'password' => ['required', 'min:5'],
-            'confirm-password' => ['same:password']
+            'newpassword' => ['required', 'min:5'],
+            'confirmpassword' => ['same:newpassword']
         ]);
 
         $existingUser = User::where('email', $attributes['email'])->first();
         if ($existingUser) {
             $existingUser->update([
-                'password' => $attributes['password']
+                'password' => $attributes['newpassword']
             ]);
-            return redirect('login');
+            return view('change-password', ['msg' => "Password updated successfully."]);
         } else {
-            return back()->with('error', 'Your email does not match the email who requested the password change');
+            return view('change-password', ['msg' => "Your password could not be updated."]);
         }
     }
 }
