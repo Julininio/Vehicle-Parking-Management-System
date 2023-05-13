@@ -5,7 +5,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span></button>
-            <a class="navbar-brand" href="/"><span>Vechicle </span>Parking System</a>
+            <a class="navbar-brand" href="/dashboard"><span>Vechicle </span>Parking System</a>
             <ul class="nav navbar-top-links navbar-right">
 
 
@@ -22,9 +22,9 @@
                             <div><em class="fa fa-key"></em> Change Password</div>
                         </a></li>
                         <li class="divider"></li>
-                        {{-- <li><a href="">
+                         <li><a href="/settings">
                             <div><em class="fa fa-cogs"></em> Settings</div>
-                        </a></li> --}}
+                        </a></li> 
                         <li class="divider"></li>
                         <li><a href="/logout">
                             <div><em class="fa fa-power-off"></em> Logout</div>

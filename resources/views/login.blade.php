@@ -4,13 +4,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Vehicle Parking System</title>
-	<link href="{{ asset("/assets/css/bootstrap.min.css") }}" rel="stylesheet">
-	<link href="{{ asset("/assets/css/datepicker3.css") }}" rel="stylesheet">
-	<link href="{{ asset("/css/styles.css") }}" rel="stylesheet">
-	<!--[if lt IE 9]>
-	<script src="js/html5shiv.js"></script>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/datepicker3.css" rel="stylesheet">
+	<link href="assets.css/styles.css" rel="stylesheet">
+	
 </head>
 <body>
 	<div class="row">
@@ -47,7 +44,7 @@
 	</div><!-- /.row -->
 
 
-<script src="{{ asset("/assets/js/jquery-1.11.1.min.js") }}"></script>
-	<script src="{{ asset("/assets/js/bootstrap.min.js") }}"></script>
+<script src="assets/js/jquery-1.11.1.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>
