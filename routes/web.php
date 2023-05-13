@@ -1,13 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\welcomecontroller;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserProfileController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\VehicleCategoryController;
+use App\Http\Controllers\VehicleEntryController;
+use App\Http\Controllers\InVehiclesController;
+use App\Http\Controllers\OutVehiclesController;
+use App\Http\Controllers\ViewReportsController;
+use App\Http\Controllers\TotalIncomeController;
 use App\Http\Controllers\ResetPassword;
 use App\Http\Controllers\ChangePassword;
 
@@ -23,6 +28,10 @@ use App\Http\Controllers\ChangePassword;
 |
 */
 
+Route::get('/', function() {
+	return view('vehicle-category', ['category' => $category]);
+});
+
 Route::get('/', [HomeController::class, "index"])->middleware('auth');
 
 Route::get('/login', [LoginController::class, 'show'])->middleware('guest')->name("login");
@@ -30,9 +39,9 @@ Route::post('/login', [LoginController::class, 'login'])->middleware('guest');
 Route::get('logout', [LoginController::class, 'logout'])->name('logout'); // should this be a post.
 
 Route::post('/register', [RegisterController::class, 'store'])->middleware('guest')->name('register.perform');
-Route::get('/dashboard', [DashboardController::class, 'show_dash'])->name("dashboard");
+Route::get('/dashboard', [DashboardController::class, 'begin'])->name("dashboard");
 
-Route::get('/vehicle-category', [DashboardController::class, 'show_category']);
+Route::get('/vehicle-category', [VehicleCategoryController::class, 'categ']) -> name('vehicle-category');
 Route::get('/add-category', [DashboardController::class, 'show_add_category']);
 Route::post('/add-category', [DashboardController::class, 'save_added_category']);
 

@@ -4,7 +4,7 @@
             <img src="https://www.w3schools.com/howto/img_avatar.png" width="50" class="img-responsive" alt="Icon">
         </div>
         <div class="profile-usertitle">
-            <div class="profile-usertitle-name">{{ Auth::user()->username }} </div>
+        <div class="profile-usertitle-name">Silver</div>  
             <div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
         </div>
         <div class="clear"></div>

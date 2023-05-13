@@ -5,11 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class welcomecontroller extends Controller
+class ViewReportsController extends Controller
 {
-    //
-
-    public function show(){
-        return view('login');
+    public function reports() {
+        return view('reports');
     }
 }
