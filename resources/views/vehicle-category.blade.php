@@ -53,7 +53,7 @@
         <tbody>
 
 
-                @foreach ($category as $category)
+                @foreach ($categories as $category)
                 <tr>
                     <td>{{$category->ID}}</td>
                     <td>{{$category->VehicleCat}}</td>
