@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use \Illuminate\Contracts\Support\Renderable;
+use App\Models\Admin;
 
 class LoginController extends Controller
 {

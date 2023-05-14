@@ -32,6 +32,7 @@ class RegisterController extends Controller
             'VehicleCategory' => 'required',
             'OwnerName' => 'required',
             'OwnerContactNumber' => 'required',
+            'ParkingCharge' => ['max:20'],
         ]);
         
         Vehicle_Info::create($attributes);

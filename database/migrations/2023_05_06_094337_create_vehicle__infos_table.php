@@ -7,12 +7,10 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+    
     public function up(): void
     {
-        Schema::create('vehicle__infos', function (Blueprint $table) {
+        Schema::create('vehicle_info', function (Blueprint $table) {
             $table->engine = 'InnoDB';
 
             $table->id('ID');
@@ -31,11 +29,8 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('vehicle__infos');
+        Schema::dropIfExists('vehicle_info');
     }
 };

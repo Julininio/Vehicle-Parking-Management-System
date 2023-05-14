@@ -4,7 +4,7 @@
             <img src="https://www.w3schools.com/howto/img_avatar.png" width="50" class="img-responsive" alt="Icon">
         </div>
         <div class="profile-usertitle">
-            <div class="profile-usertitle-name">Silver</div>
+            <div class="profile-usertitle-name">Admin</div>
             <div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
         </div>
         <div class="clear"></div>
@@ -26,7 +26,6 @@
         <li class=""><a href="/in-vehicles"><em class="fa fa-toggle-on">&nbsp;</em> IN Vehicles</a></li>
         <li class=""><a href="/out-vehicles"><em class="fa fa-toggle-off">&nbsp;</em> OUT Vehicles</a></li>
         <li class=""><a href="/reports"><em class="fa fa-file">&nbsp;</em> View Reports</a></li>
-        <!-- <li class=""><a href="about.php"><em class="fa fa-info">&nbsp;</em> About Page</a></li> -->
         <li class=""><a href="total-income"><em class="fa fa-dollar">&nbsp;</em> Total Income</a></li>
 
     </ul>

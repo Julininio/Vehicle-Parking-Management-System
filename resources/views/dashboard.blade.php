@@ -43,7 +43,6 @@
 				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
 					<div class="panel panel-teal panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-car color-blue"></em>
-                            {{-- This is hardcoded --}}
 							<div class="large">{{$rows[5]}}</div>
 							<div class="text-muted">Total Vehicles Parked</div>
 						</div>
@@ -52,7 +51,6 @@
 				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
 					<div class="panel panel-blue panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-toggle-on color-orange"></em>
-                            {{-- This is hardcoded --}}
 							<div class="large">{{$rows[3]}}</div>
 							<div class="text-muted">Vehicles IN</div>
 						</div>
@@ -61,7 +59,6 @@
 				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
 					<div class="panel panel-orange panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-toggle-off color-teal"></em>
-                            {{-- This is hardcoded --}}
 							<div class="large">{{$rows[4]}}</div>
 							<div class="text-muted">Vehicles OUT</div>
 						</div>
@@ -70,7 +67,6 @@
 				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
 					<div class="panel panel-red panel-widget ">
 						<div class="row no-padding"><em class="fa fa-xl fa-clock-o color-red"></em>
-                            {{-- //TODO; This is hardcoded --}}
 							<div class="large">0</div>
 							<div class="text-muted">Parking Done within 24 hrs</div>
 						</div>
@@ -112,30 +108,22 @@
 					</div>
 				</div>
 			</div>
-		</div> <!-- /.row -->
+		</div> 
 
         @include('footer')
 	</div>
 
-	<script src="{{ asset("/assets/js/jquery-1.11.1.min.js") }}"></script>
-	<script src="{{ asset("/assets/js/bootstrap.min.js") }}"></script>
-	<script src="{{ asset("/assets/js/chart.min.js") }}"></script>
-	<script src="{{ asset("/assets/js/chart-data.js") }}"></script>
-	<script src="{{ asset("/assets/js/easypiechart.js") }}"></script>
-	<script src="{{ asset("/assets/js/easypiechart-data.js") }}"></script>
-	<script src="{{ asset("/assets/js/bootstrap-datepicker.js") }}"></script>
-	<script src="{{ asset("/assets/js/custom.js") }}"></script>
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/chart.min.js"></script>
+	<script src="assets/js/chart-data.js"></script>
+	<script src="assets/js/easypiechart.js"></script>
+	<script src="assets/js/easypiechart-data.js"></script>
+	<script src="assets/js/bootstrap-datepicker.js"></script>
+	<script src="assets/js/custom.js"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js'></script>
 	<script>
 		window.onload = function () {
-	// var chart1 = document.getElementById("line-chart").getContext("2d");
-	// window.myLine = new Chart(chart1).Line(lineChartData, {
-	// responsive: true,
-	// scaleLineColor: "rgba(0,0,0,.2)",
-	// scaleGridLineColor: "rgba(0,0,0,.05)",
-	// scaleFontColor: "#c5c7cc"
-	// });
-
 	var ctx = document.getElementById("myChart").getContext('2d');
 	var myChart = new Chart(ctx, {
 	type: 'pie',
@@ -143,7 +131,7 @@
 	labels: ["Vehicle In-Time","Vehicle Out-Time"],
 	datasets: [{
 	backgroundColor: ["#30a5ff","#33cccc"],
-	data: [{{$rows[3]}}, {{$rows[4]}}] // TODO;
+	data: [{{$rows[3]}}, {{$rows[4]}}] 
 	}]
 	}
 	});

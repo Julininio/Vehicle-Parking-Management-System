@@ -9,7 +9,6 @@
 	<link href="assets/css/datepicker3.css" rel="stylesheet">
 	<link href="assets/css/styles.css" rel="stylesheet">
 
-	<!--Custom Font-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
 </head>
@@ -23,7 +22,7 @@
 				<li><a href="">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">Manage Vehicle</li>
+				<li class="active">Manage Vehicles</li>
 			</ol>
 		</div><!--/.row-->
 

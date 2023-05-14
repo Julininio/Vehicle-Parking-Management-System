@@ -34,12 +34,12 @@ class DashboardController extends Controller
 
     public function show_in_vehicles(){
         $rows = Vehicle_Info::where("Status", '')->get();
-        return view("in-vehicles", ['rows' => $rows]);
+        return view('in-vehicles', ['rows' => $rows]);
     }
 
     public function show_out_vehicles(){
         $rows = Vehicle_Info::where("Status", 'Out')->get();
-        return view("out-vehicles", ['rows' => $rows]);
+        return view('out-vehicles', ['rows' => $rows]);
     }
 
     public function generate_reports(Request $request){
@@ -54,9 +54,11 @@ class DashboardController extends Controller
     }
 
     public function total_income(){
-        //TODO; find queries for this one, also.
         return view('total-income');
     }
 
+    public function show_add_category(){
+        return view('add-category');
+    }
 
 }

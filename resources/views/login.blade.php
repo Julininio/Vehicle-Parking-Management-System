@@ -6,7 +6,7 @@
 	<title>Vehicle Parking System</title>
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/css/datepicker3.css" rel="stylesheet">
-	<link href="assets.css/styles.css" rel="stylesheet">
+	<link href="assets/css/styles.css" rel="stylesheet">
 	
 </head>
 <body>
@@ -16,15 +16,7 @@
 			<div class="login-panel panel panel-default">
 				<div class="panel-heading">Please Log In To Continue</div>
 				<div class="panel-body">
-					<form method="POST" action="/login">
-                        @csrf
-
-                        @if ($msg)
-                                <div class='alert bg-danger' role='alert'>
-                                    <em class='fa fa-lg fa-warning'>&nbsp;</em>
-                                    {{$msg}}
-                                </div>
-                            @endif
+					<form method="POST" action="/dashboard">
 						<fieldset>
 							<div class="form-group">
 								<input class="form-control" placeholder="Username" name="username" type="text" value="nangosha">
@@ -33,7 +25,7 @@
 								<input class="form-control" placeholder="Password" name="password" type="password" value="nangosha">
 							</div>
 							<div class="checkbox">
-								<a href="{{ url("/forgot-password") }}" style="text-decoration:none;">Forgot Password?</a>
+								<a href="/forgot-password" style="text-decoration:none;">Forgot Password?</a>
 							</div>
 							<button class="btn btn-success" type="submit">Login</button>
                         </fieldset>
